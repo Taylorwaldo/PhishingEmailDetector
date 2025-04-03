@@ -109,7 +109,7 @@ public class Email {
      * @param link
      */
 
-    public void addLinks(List<String> link) {
+    public void addLink(String link) {
         this.links.add(link);
     }
 
@@ -140,6 +140,9 @@ a method from a parent class (toString() from Object).
                 ", links=" + links.size() +
                 ", attachments=" + attachments.size() +
                 '}';
+        /*
+        Example Output - Email{sender='suspicious@example.com', subject='You won!', body length=157, links=3, attachments=1}
+         */
     }
 
 }

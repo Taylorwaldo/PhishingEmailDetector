@@ -1,0 +1,102 @@
+# List of keywords commonly found in phishing emails
+# One phrase per line, comments start with #
+
+# Urgent language
+urgent
+immediate attention
+act now
+action required
+urgent action
+time sensitive
+expires soon
+limited time
+deadline
+final notice
+last chance
+
+# Security-related
+verify your account
+suspicious activity
+security alert
+unusual login
+password expired
+account suspended
+unauthorized access
+security breach
+security update
+
+# Account-related
+confirm your identity
+verify your information
+validate your account
+update your account
+account verification
+update your details
+account compromised
+reactivate your account
+restore your account access
+
+# Financial hooks
+payment
+invoice
+refund
+transaction
+billing
+money
+bank
+credit card
+financial
+tax
+
+# Prize bait
+congratulations
+winner
+won
+lottery
+prize
+reward
+free
+gift
+bonus
+claim your
+
+# Requests for sensitive information
+confirm your password
+update payment information
+verify credit card
+enter your credentials
+update billing information
+confirm your SSN
+social security
+date of birth
+bank account
+credit card
+
+# Consequences/Threats
+account will be terminated
+account will be suspended
+failure to comply
+legal action
+violation of policy
+delayed processing
+service terminated
+limited access
+
+# Credibility phrases
+secure link
+official
+authorized
+authenticated
+certified
+on behalf of
+customer service
+
+# Tech support scam
+tech support
+virus detected
+malware
+infected
+hacked
+trojan
+spyware
+remote assistance

@@ -1,0 +1,36 @@
+# List of medium-risk file extensions
+# One extension per line (include the dot), comments start with #
+
+# Compressed archives (may contain malicious files)
+.zip
+.rar
+.7z
+.tar
+.gz
+.cab
+.iso
+
+# Java-related
+.jar
+.jnlp
+
+# Windows shortcuts
+.lnk
+.url
+.pif
+
+# Office documents (can contain macros but not always)
+.doc
+.xls
+.ppt
+.rtf
+
+# PDF files (can contain malicious JavaScript)
+.pdf
+
+# Database files
+.accdb
+.mdb
+
+# Windows help files
+.chm

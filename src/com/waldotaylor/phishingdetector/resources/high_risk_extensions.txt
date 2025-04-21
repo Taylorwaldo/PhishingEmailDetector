@@ -1,0 +1,38 @@
+# List of high-risk file extensions
+# One extension per line (include the dot), comments start with #
+
+# Executable files
+.exe
+.bat
+.cmd
+.com
+.msi
+.scr
+
+# Script files
+.js
+.vbs
+.ps1
+.hta
+.jse
+.wsf
+.psc1
+.msh
+.msh1
+.msh2
+.mshxml
+.msc
+
+# System files
+.reg
+.inf
+.sys
+.dll
+
+# Potentially dangerous document types
+.docm
+.xlsm
+.pptm
+.dotm
+.xltm
+.potm

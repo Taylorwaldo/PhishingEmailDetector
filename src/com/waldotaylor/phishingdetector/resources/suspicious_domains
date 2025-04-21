@@ -1,0 +1,32 @@
+# List of suspicious domains for phishing detection
+# One domain per line, comments start with #
+
+# URL shorteners (often used to hide malicious links)
+bit.ly
+tinyurl.com
+goo.gl
+ow.ly
+t.co
+is.gd
+
+# Common suspicious domains
+suspiciousdomain.com
+scam-site.net
+freestuff.xyz
+unsecuremail.org
+free-money.com
+login-verify.net
+account-security.org
+banking-secure.info
+verification-required.com
+update-account.net
+password-reset.info
+unusual-activity.com
+security-alert.net
+bank-verification.com
+account-update.org
+customer-service.info
+gift-card.xyz
+lottery-winner.net
+prize-winner.com
+claim-prize.org

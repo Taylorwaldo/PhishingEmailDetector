@@ -21,15 +21,6 @@ public class Email {
      * @param body
      */
 
-    /*
-    note2self - delete l8r
-    - links and attachments aren't parameters in the constructor.
-    - they are initialized as empty Arraylists in constructor
-    - every new "Email" object starts with an empty collection that can be populated l8r
-    - Not every email will have links/attachment, excluding it makes it an optional component
-    - Flexibility in adding items
-     */
-
     public Email(String sender, String subject, String body) {
         this.sender = sender;
         this.subject = subject;
@@ -39,21 +30,6 @@ public class Email {
     }
 
     // Getters and Setters
-
-
-    /*
-    note2self - delete l8r
-    public String methods (getters)
-        these return a value of type string
-        example - getSender() returns the value stored in the sender field
-        no param
-
-
-     public void methods (setters):
-        Void - don't return any value
-        example: setSender(String sender) just sets the value, doesn't need to return anything
-        params because they update/change a field value and need to know what new value to set
-     */
 
     public String getSender() {
         return sender;
@@ -98,28 +74,27 @@ public class Email {
         return links;
     }
 
-    // Add a single link (setting via setLinks would replace the entire list of links)
-    /*
-    The parameter in addLink(String link) is named "link" (singular) because
-    we are adding just one link at a time to the collection.
-     */
-
     /**
-     *
-     * @param link
+     * Adds a single link to the email
+     * @param link The URL to add
      */
 
     public void addLink(String link) {
         this.links.add(link);
     }
 
+    /**
+     *
+     * @return The list of attachments found in the email
+     */
+
     public List<String> getAttachments() {
         return attachments;
     }
 
     /**
-     *
-     * @param attachment
+     * Adds a single attachment to the email
+     * @param attachment The attachment filename or description
      */
 
     public void addAttachment(String attachment) {
@@ -127,8 +102,7 @@ public class Email {
     }
 
     /*
-@Override: An annotation that tells the compiler we're overriding
-a method from a parent class (toString() from Object).
+    Returns a string representation of the Email object
  */
 
     @Override

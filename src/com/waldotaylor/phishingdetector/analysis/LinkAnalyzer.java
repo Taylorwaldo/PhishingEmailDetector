@@ -50,7 +50,7 @@ public class LinkAnalyzer extends ThreatDetector {
 
             // Check if URL contains "http" without "s" (not secure)
             if (link.startsWith("http:") && !link.startsWith("https:")) {
-                linkScore += 15;
+                linkScore += 25;
             }
 
             /*
@@ -69,7 +69,7 @@ public class LinkAnalyzer extends ThreatDetector {
 
              */
             if (link.matches(".*\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}.*")) {
-                linkScore += 30;
+                linkScore += 50;
             }
 
             // Extract domain from URL

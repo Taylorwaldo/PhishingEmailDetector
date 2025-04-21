@@ -48,8 +48,8 @@ public class HeaderAnalyzer extends ThreatDetector {
 
         // Check for mismatches sender information
         if (sender.contains("<") && sender.contains(">")) {
-            String displayName = sender.substring(0, sender.indexOf("<")).trim();                               // Extract everything before < -> display name
-            String emailAddress = sender.substring(sender.indexOf("<") + 1, sender.indexOf(">")).trim();        // Extract text between < and > -> actual email address
+            String displayName = sender.substring(0, sender.indexOf("<")).trim();                               // Extract everything before < → display name
+            String emailAddress = sender.substring(sender.indexOf("<") + 1, sender.indexOf(">")).trim();        // Extract text between < and > → actual email address
 
             // Check if display name contains a different domain than the email address
             if (emailAddress.contains("@")) {

@@ -1,3 +1,12 @@
+/**
+ *
+ * @author Taylor Waldo, James Bostick, Bennett Marsee, Caitlyn Pillsbury, Caleb Walton
+ * Date: 4/23/2025
+ * Section: CSC-331-002
+ * Purpose: To coordinate all the analyzers and process their scores to determine the final phishing score.
+ *
+ */
+
 package com.waldotaylor.phishingdetector.main;
 
 import com.waldotaylor.phishingdetector.analysis.*;

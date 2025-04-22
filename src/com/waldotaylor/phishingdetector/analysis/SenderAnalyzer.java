@@ -1,4 +1,13 @@
-
+/**
+ *
+ * @author Taylor Waldo, James Bostick, Bennett Marsee, Caitlyn Pillsbury, Caleb Walton
+ * Date: 4/23/2025
+ * Section: CSC-331-002
+ * Purpose: To evaluate how suspicious the sender's email address is based on patterns that may indicate phishing. The
+ * result score of this part of the analysis is combined with the scores of the tests of the other email parts to
+ * determine the likelihood of a phishing attempt.
+ *
+ */
 
 
 package com.waldotaylor.phishingdetector.analysis;
@@ -57,6 +66,14 @@ public class SenderAnalyzer extends ThreatDetector {
          */
     private static final Pattern EMAIL_PATTERN =
             Pattern.compile("^[A-Za-z0-9+_.-]+@(.+)$");
+
+    /**
+     * This method analyzes the email address of the sender for a number of things, such as
+     * the wording and domain of the email address.
+     * @param email The email to analyze
+     * @return A score that represents the likelihood of the email being a phishing attempt based on the sender's email
+     * address alone.
+     */
 
     @Override
     public int analyze(Email email) {

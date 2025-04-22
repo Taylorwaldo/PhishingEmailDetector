@@ -1,3 +1,15 @@
+/**
+ *
+ * @author Taylor Waldo, James Bostick, Bennett Marsee, Caitlyn Pillsbury, Caleb Walton
+ * Date: 4/23/2025
+ * Section: CSC-331-002
+ * Purpose: To analyze the content of the email for suspicious language patterns to determine a score based on patterns
+ * that may indicate phishing. The result score of this part of the analysis is combined with the scores of the tests
+ * of the other email parts to determine the likelihood of a phishing attempt.
+ *
+ */
+
+
 package com.waldotaylor.phishingdetector.analysis;
 import com.waldotaylor.phishingdetector.model.Email;
 import com.waldotaylor.phishingdetector.util.ResourceLoader;
@@ -18,9 +30,8 @@ Logic
 7. Accumulates a score based on these factors, with a max of 100
  */
 
-/**
- * Analyzes email content for phishing language patterns
- */
+
+// Analyzes email content for phishing language patterns
 
 public class ContentAnalyzer extends ThreatDetector {
     // Load phishing keywords from resource file
@@ -53,6 +64,13 @@ public class ContentAnalyzer extends ThreatDetector {
             Pattern.compile("(?i)\\b(login|sign\\s*in)\\b"),
             Pattern.compile("(?i)\\b(verify your)\\b")
     );
+
+    /**
+     * This method analyzes the likelihood of a phishing attempt based on things such as the subject and body's
+     * keywords and writing style.
+     * @param email The email to analyze
+     * @return A score that represents the likelihood of a phishing attempt based on this test alone.
+     */
 
     @Override
     public int analyze(Email email) {

@@ -1,3 +1,13 @@
+/**
+ *
+ * @author Taylor Waldo, James Bostick, Bennett Marsee, Caitlyn Pillsbury, Caleb Walton
+ * Date: 4/23/2025
+ * Section: CSC-331-002
+ * Purpose: To process the contents of the files in the resources folder for use in helping to determine phishing
+ * scores.
+ */
+
+
 package com.waldotaylor.phishingdetector.util;
 
 import java.io.BufferedReader;
@@ -7,9 +17,9 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Utility class for loading resources from the classpath
- */
+
+// Utility class for loading resources from the classpath
+
 public class ResourceLoader {
 
     /**

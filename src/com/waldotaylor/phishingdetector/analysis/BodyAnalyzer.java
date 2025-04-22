@@ -1,3 +1,14 @@
+/**
+ *
+ * @author Taylor Waldo, James Bostick, Bennett Marsee, Caitlyn Pillsbury, Caleb Walton
+ * Date: 4/23/2025
+ * Section: CSC-331-002
+ * Purpose: To extract links and potential attachments from the email body and perform initial content analysis to
+ * determine a score based on patterns that may indicate phishing. The result score of this part of the analysis is
+ * combined with the scores of the tests of the other email parts to determine the likelihood of a phishing attempt.
+ *
+ */
+
 package com.waldotaylor.phishingdetector.analysis;
 import com.waldotaylor.phishingdetector.model.Email;
 
@@ -38,6 +49,12 @@ public class BodyAnalyzer extends ThreatDetector {
      */
     private static final Pattern ATTACHMENT_PATTERN =
             Pattern.compile("(?i)(attached|attachment|file|document|pdf|doc|xlsx|zip)\\s+[^\\s.,;:!?]{1,50}");
+
+    /**
+     * This method analyzes the email body based on factors such as certain phrases, URLs, and attachments.
+     * @param email The email to analyze
+     * @return A score that represents the likelihood of a phishing attempt based on this test alone.
+     */
 
     @Override
     public int analyze(Email email) {

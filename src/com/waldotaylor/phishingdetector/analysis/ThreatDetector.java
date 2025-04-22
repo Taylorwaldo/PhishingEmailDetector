@@ -21,7 +21,7 @@ public abstract class ThreatDetector {  // Add the 'abstract' keyword here
     public abstract int analyze(Email email);
 
     /**
-     * Return a name for this detector, useed in reporting
+     * Return a name for this detector, used in reporting
      * Default implementation returns the class name without the "Analyzer" suffix
      * @return The name of the detector
      */

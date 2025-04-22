@@ -1,3 +1,13 @@
+/**
+ LinkAnalyzer.java
+ This program can analyse any links found in the email and help determine if they
+ might be suspicious
+ @author Waldo Taylor, Caitlyn Pillsbury, James Bostick, Bennett Marsee, Caleb Walton
+ Date: April 22, 2025
+ Section: CSC 331
+ Purpose: Analyzes links in the email to detect suspicious URLs that might be phishing attempts.
+ */
+
 package com.waldotaylor.phishingdetector.analysis;
 
 import com.waldotaylor.phishingdetector.model.Email;
@@ -32,6 +42,14 @@ public class LinkAnalyzer extends ThreatDetector {
 
     // Load legitimate domains from the resource file
     private static final List<String> LEGITIMATE_DOMAINS = ResourceLoader.loadResourceAsList("/com/waldotaylor/phishingdetector/resources/legitimate_domains.txt");
+
+    /**
+     * Analyses any links contained in the email and gives it a score based on how suspicious it appears
+     *
+     * @param email The email to analyze
+     * @return score, the calculated threat score of the highest scored link,
+     * or 100, whichever one is smaller
+     */
 
     @Override
     public int analyze(Email email) {

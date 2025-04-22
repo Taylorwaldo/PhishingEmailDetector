@@ -1,8 +1,19 @@
+/**
+ AttachmentAnalyzer.java
+ This program can take an email's attachments  and help determine if they
+ might be suspicious
+ @author Waldo Taylor, Caitlyn Pillsbury, James Bostick, Bennett Marsee, Caleb Walton
+ Date: April 22, 2025
+ Section: CSC 331
+ Purpose: Examines email attachments for potentially dangerous file types.
+ */
+
 package com.waldotaylor.phishingdetector.analysis;
 import com.waldotaylor.phishingdetector.model.Email;
 import com.waldotaylor.phishingdetector.util.ResourceLoader;
 
 import java.util.List;
+
 
 /*
 Purpose -> Examines email attachments for potentially dangerous file types.
@@ -26,6 +37,14 @@ public class AttachmentAnalyzer extends ThreatDetector {
 
     // Load medium-risk file extensions from resource file
     private static final List<String> MEDIUM_RISK_EXTENSIONS = ResourceLoader.loadResourceAsList("/com/waldotaylor/phishingdetector/resources/medium_risk_extensions.txt");
+
+    /**
+     * Analyses any attachments in the email and gives a score based on the most suspicious attachment extension
+     *
+     * @param email The email to analyze
+     * @return highestScore, the highest calculated threat score of the attachments in the
+     * email.
+     **/
 
     @Override
     public int analyze(Email email) {

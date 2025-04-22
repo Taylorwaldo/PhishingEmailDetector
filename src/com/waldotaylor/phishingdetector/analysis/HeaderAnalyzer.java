@@ -1,3 +1,13 @@
+/**
+ HeaderAnalyzer.java
+ This program can analyse an email's header  and help determine if it
+ might be suspicious
+ @author Waldo Taylor, Caitlyn Pillsbury, James Bostick, Bennett Marsee, Caleb Walton
+ Date: April 22, 2025
+ Section: CSC 331
+ Purpose: Examines email headers, focusing on the subject line and sender information.
+ */
+
 package com.waldotaylor.phishingdetector.analysis;
 import com.waldotaylor.phishingdetector.model.Email;
 import com.waldotaylor.phishingdetector.util.ResourceLoader;
@@ -22,6 +32,13 @@ public class HeaderAnalyzer extends ThreatDetector {
     // Load suspicious subject patterns from resource file
     private static final List<String> SUSPICIOUS_SUBJECT_PATTERNS = ResourceLoader.loadResourceAsList("/com/waldotaylor/phishingdetector/resources/phishing_keywords.txt");
 
+    /**
+     * Analyses the header of the email and gives it a score based on how suspicious it appears
+     *
+     * @param email The email to analyze
+     * @return score, the calculated threat score of the header,
+     * or 100, whichever one is smaller
+     */
     @Override
     public int analyze(Email email) {
         String subject = email.getSubject();

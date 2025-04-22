@@ -1,3 +1,13 @@
+/**
+ HeaderAnalyzer.java
+ The abstract class that all of the analyzers inherit from
+ @author Waldo Taylor, Caitlyn Pillsbury, James Bostick, Bennett Marsee, Caleb Walton
+ Date: April 22, 2025
+ Section: CSC 331
+ Purpose: ThreatDetector is an abstract base class for building different types of
+ "analyzers" that look at emails and assign a threat score from 0 to 100.
+ */
+
 package com.waldotaylor.phishingdetector.analysis;
 import com.waldotaylor.phishingdetector.model.Email;
 
@@ -21,7 +31,7 @@ public abstract class ThreatDetector {  // Add the 'abstract' keyword here
     public abstract int analyze(Email email);
 
     /**
-     * Return a name for this detector, useed in reporting
+     * Return a name for this detector, used in reporting
      * Default implementation returns the class name without the "Analyzer" suffix
      * @return The name of the detector
      */

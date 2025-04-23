@@ -21,6 +21,7 @@ No additional installation is required
 Starting the Application
 
 Double-click the application JAR file or run: java com.waldotaylor.phishingdetector.main.PhishingDetectorApplication
+
 You'll see the welcome screen:
 
 ![Image Alt](https://github.com/Taylorwaldo/PhishingEmailDetector/blob/077fbba69f4a480b4434c4ee5a933aeac7d5daf4/UTF-8Screenshot(110).png)
@@ -40,6 +41,7 @@ In the main interface, enter the email details:
 
 
 Click the "Calculate" button to analyze the email.
+
 Review the results in the panel on the right:
 
 ![Image Alt](https://github.com/Taylorwaldo/PhishingEmailDetector/blob/main/UTF-8Screenshot(112).png?raw=true)

@@ -117,7 +117,7 @@ Combination Warnings
 "CRITICAL: Requests for sensitive information combined with suspicious attachments (40% risk escalation)"
 "CRITICAL: Suspicious links combined with requests for sensitive information (30% risk escalation)"
 
-** Any new findings can be added to its respectful resource txt file **
+**Any new findings can be added to its respectful resource txt file**
 
 
 

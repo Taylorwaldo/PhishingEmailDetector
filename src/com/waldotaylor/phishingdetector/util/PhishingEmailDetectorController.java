@@ -40,7 +40,7 @@ public class PhishingEmailDetectorController {
     private Parent root;
 
     @FXML
-    private TextField emailTextField;
+    private TextField emailTextField; // TextField extends javafx.scene.control.TextInputControl
 
     @FXML
     private TextField subjectTextField;
@@ -64,7 +64,7 @@ public class PhishingEmailDetectorController {
      * @param event The ActionEvent triggered by clicking the start button
      * @throws IOException If the FXML file fails to load.
      */
-    @FXML
+    @FXML //Polymorphism through JavaFX runtime
     public void handleStartButton(ActionEvent event) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("PhishingEmailDetector.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

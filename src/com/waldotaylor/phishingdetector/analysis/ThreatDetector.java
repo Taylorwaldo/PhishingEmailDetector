@@ -19,6 +19,8 @@ Logic ->
 1. Defines an abstract method that all child classes must implement
 2. Provides a helper method to get a "easy on the eyes" readable name for each detector.
  */
+
+//an abstract class that is inherited from by its children
 public abstract class ThreatDetector {  // Add the 'abstract' keyword here
 
     /**

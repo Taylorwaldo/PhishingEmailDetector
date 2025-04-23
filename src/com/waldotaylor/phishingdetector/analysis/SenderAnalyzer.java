@@ -34,6 +34,7 @@ Logic -->
 
  */
 
+//a child class that inherits from the abstract class ThreatDetector
 public class SenderAnalyzer extends ThreatDetector {
     // List of suspicious domains from resource file
     private static final List<String> SUSPICIOUS_DOMAINS =

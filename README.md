@@ -66,11 +66,17 @@ The application uses a 0-100 scoring system to indicate the likelihood of an ema
 Even with this tool, follow these best practices when dealing with suspicious emails:
 
 Never click links in suspicious emails
+
 Verify sender identities through official channels
+
 Don't open unexpected attachments
+
 Be wary of urgent requests or threats
+
 Check for spelling and grammar errors
+
 Hover over links to view the actual URL
+
 Report phishing attempts to your IT department or service provider
 
  

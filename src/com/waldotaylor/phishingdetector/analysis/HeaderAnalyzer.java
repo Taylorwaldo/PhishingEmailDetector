@@ -27,7 +27,7 @@ Logic ->
  */
 
 // checks SPF/DKIM headers, sender legitimacy
-
+//a child class that inherits from the abstract class ThreatDetector
 public class HeaderAnalyzer extends ThreatDetector {
     // Load suspicious subject patterns from resource file
     private static final List<String> SUSPICIOUS_SUBJECT_PATTERNS = ResourceLoader.loadResourceAsList("/com/waldotaylor/phishingdetector/resources/phishing_keywords.txt");

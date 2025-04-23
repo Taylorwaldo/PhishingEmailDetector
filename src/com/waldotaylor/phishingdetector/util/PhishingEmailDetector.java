@@ -1,3 +1,12 @@
+/**
+ *
+ * @author Taylor Waldo, James Bostick, Bennett Marsee, Caitlyn Pillsbury, Caleb Walton
+ * Date: 4/23/2025
+ * Section: CSC-331-002
+ * Purpose: launches the JavaFX application and loads the GUI
+ * defined in the "PhishingEmailDetectorHome.fxml" file
+ */
+
 package com.waldotaylor.phishingdetector.util;
 
 import javafx.application.Application;

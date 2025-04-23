@@ -9,6 +9,9 @@ linkedin.com
 instagram.com
 youtube.com
 netflix.com
+github.com
+booking.com
+ritz-london.com
 
 # Major banks
 bankofamerica.com

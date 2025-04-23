@@ -31,6 +31,7 @@ Logic:
  * Analyzes email attachments for suspicious file types
  */
 
+//a child class that inherits from the abstract class ThreatDetector
 public class AttachmentAnalyzer extends ThreatDetector {
     // Load high-risk file extensions from resource file
     private static final List<String> HIGH_RISK_EXTENSIONS = ResourceLoader.loadResourceAsList("/com/waldotaylor/phishingdetector/resources/high_risk_extensions.txt");

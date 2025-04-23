@@ -27,6 +27,7 @@ Logic ->
 5. Examines formatting indicators
  */
 
+//a child class that inherits from the abstract class ThreatDetector
 public class BodyAnalyzer extends ThreatDetector {
     /*
     Pattern to extract URLs from body text

@@ -24,6 +24,7 @@ account suspended
 unauthorized access
 security breach
 security update
+verify your identity
 
 # Account-related
 confirm your identity
@@ -47,6 +48,8 @@ bank
 credit card
 financial
 tax
+credit card details
+online banking credentials
 
 # Prize bait
 congratulations
@@ -90,6 +93,7 @@ authenticated
 certified
 on behalf of
 customer service
+security purposes
 
 # Tech support scam
 tech support

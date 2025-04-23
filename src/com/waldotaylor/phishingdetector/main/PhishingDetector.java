@@ -40,7 +40,7 @@ public class PhishingDetector {
     public static final String ANSI_ORANGE = "\u001B[38;5;208m"; // Close approximation of orange
 
     // The analyzers with their respective weights for the final score
-    private final Map<ThreatDetector, Double> analyzers = new HashMap<>();
+    private static final Map<ThreatDetector, Double> analyzers = new HashMap<>();
 
     /**
      * Creates a new PhishingDetector with default analyzers and weights
@@ -76,7 +76,7 @@ public class PhishingDetector {
      * @param email The email to analyze
      * @return A score from 0-100 indicating phishing probability
      */
-    public int analyzeEmail(Email email) {
+    public static int analyzeEmail(Email email) {
         // First run the BodyAnalyzer to extract links and potential attachments
         // This needs to be done before other analyzers since they may need this data
         for (ThreatDetector analyzer : analyzers.keySet()) {
@@ -133,7 +133,7 @@ public class PhishingDetector {
      * @param baseScore The initial weighted score
      * @return The adjusted score after applying multipliers
      */
-    private int applyRiskMultipliers(Email email, int baseScore) {
+    public static int applyRiskMultipliers(Email email, int baseScore) {
         int finalScore = baseScore;
 
         // Check for dangerous combinations
@@ -193,7 +193,7 @@ public class PhishingDetector {
      * @param phishingScore The calculated phishing score
      * @return A formatted report string
      */
-    public String generateReport(Email email, int phishingScore) {
+    public static String generateReport(Email email, int phishingScore) {
         StringBuilder report = new StringBuilder();
         report.append("PHISHING EMAIL DETECTION REPORT\n");
         report.append("===============================\n\n");

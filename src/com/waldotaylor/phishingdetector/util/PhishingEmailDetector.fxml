@@ -45,7 +45,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.waldotaylor.phishingdetector.util.PhishingEmailDetectorController">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -101,7 +101,7 @@
                   <Image url="@computer%20copy%20(1).png" />
                </image>
             </ImageView>
-            <Button layoutX="481.0" layoutY="322.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="134.0" text="Calculate" />
+            <Button fx:id="handleCalculateButton" layoutX="481.0" layoutY="322.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="134.0" text="Calculate" />
             <CheckBox fx:id="attachmentCheckBox" layoutX="14.0" layoutY="268.0" mnemonicParsing="false" />
       </children>
     </AnchorPane>

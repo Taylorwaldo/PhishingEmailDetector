@@ -1,5 +1,7 @@
 # Big tech companies
 google.com
+accounts.google.com
+myaccount.google.com
 microsoft.com
 apple.com
 amazon.com

@@ -84,46 +84,64 @@ When analyzed with our tool, the report correctly identifies this as highly susp
 
 ### The Phishing Email Detector provides detailed information in its output about what specific suspicious elements it found in an email. Here are examples of what the program might tell users:
 
-Sender Analysis Warnings
+**Sender Analysis Warnings**
 
 "Sender domain does not match display name (score: 40)"
+
 "Sender uses a known suspicious domain (score: 60)"
+
 "Sender domain contains unusual numeric characters (score: 15)"
+
 "Unusually long sender domain detected (score: 10)"
 
 Subject Line Warnings
 
 "Subject line contains urgent language (score: 15)"
+
 "Excessive exclamation marks in subject (score: 15)"
+
 "Subject written entirely in ALL CAPS (score: 20)"
+
 "Subject contains suspicious keywords: 'verify', 'urgent', 'account' (score: 25)"
 
-Content Analysis Warnings
+**Content Analysis Warnings**
 
 "Email contains multiple phishing keywords (score: 35)"
+
 "Generic greeting detected ('Dear Customer') (score: 15)"
+
 "Requests for sensitive information detected (score: 40)"
+
 "Excessive use of urgent language (score: 25)"
+
 "Contains threats of account closure (score: 35)"
+
 "Multiple sections of ALL CAPS text detected (score: 10)"
 
-Link Analysis Warnings
+**Link Analysis Warnings**
 
 "Links use unsecured HTTP protocol instead of HTTPS (score: 25)"
+
 "Link contains IP address instead of domain name (score: 50)"
+
 "Suspicious domain detected in link (score: 25)"
+
 "Link may be mimicking legitimate domain: 'amaz0n.com' vs 'amazon.com' (score: 40)"
+
 "URL contains excessive special characters (score: 15)"
 
-Attachment Analysis Warnings
+**Attachment Analysis Warnings**
 
 "HIGH RISK: Contains executable file extension (.exe) (score: 80)"
+
 "MEDIUM RISK: Contains potentially dangerous file type (.pdf) (score: 40)"
+
 "SUSPICIOUS: Multiple file extensions detected (possible disguised file) (score: 15)"
 
-Combination Warnings
+**Combination Warnings**
 
 "CRITICAL: Requests for sensitive information combined with suspicious attachments (40% risk escalation)"
+
 "CRITICAL: Suspicious links combined with requests for sensitive information (30% risk escalation)"
 
 **Any new findings can be added to its respectful resource txt file**

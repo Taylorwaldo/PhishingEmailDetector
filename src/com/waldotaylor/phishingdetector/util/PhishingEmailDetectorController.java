@@ -1,3 +1,11 @@
+/**
+ *
+ * @author Taylor Waldo, James Bostick, Bennett Marsee, Caitlyn Pillsbury, Caleb Walton
+ * Date: 4/23/2025
+ * Section: CSC-331-002
+ * Purpose: Handles user interactions from the input form, processes the email content,
+ * and displays a phishing analysis report.
+ */
 package com.waldotaylor.phishingdetector.util;
 
 import com.waldotaylor.phishingdetector.analysis.ThreatDetector;

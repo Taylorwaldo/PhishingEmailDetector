@@ -83,4 +83,6 @@ Hover over links to view the actual URL
 
 Report phishing attempts to your IT department or service provider
 
+Developed by Taylor Waldo, James Bostick, Bennett Marsee, Caitlyn Pillsbury, and Caleb Walton
+Feel free to use, modify, and distribute this software for educational purposes.
  

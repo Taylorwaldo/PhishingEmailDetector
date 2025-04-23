@@ -1,6 +1,6 @@
 ### Phishing Email Detector
 
-![Image Alt](https://github.com/Taylorwaldo/PhishingEmailDetector/blob/main/custom_Logo.png?raw=true)
+![Image Alt](https://github.com/Taylorwaldo/PhishingEmailDetector/blob/main/images/custom_Logo.png?raw=true)
 
 ### Introduction
 The Phishing Email Detector is a tool that helps you identify potentially malicious emails by analyzing sender information, subject lines, content, links, and attachments. Our application provides both a command-line interface and a graphical user interface for easy analysis of suspicious emails.
@@ -24,7 +24,7 @@ Double-click the application JAR file or run: java com.waldotaylor.phishingdetec
 
 You'll see the welcome screen:
 
-![Image Alt](https://github.com/Taylorwaldo/PhishingEmailDetector/blob/main/Homepage.png?raw=true)
+![Image Alt](https://github.com/Taylorwaldo/PhishingEmailDetector/blob/main/images/Homepage.png?raw=true)
 
 Click the "Press to Start" button to proceed to the main interface.
 
@@ -32,12 +32,12 @@ Click the "Press to Start" button to proceed to the main interface.
 
 Locate any email in you inbox that you believe is a phishing attempt. For educational purposes, here is an example that is not so subtle. 
 
-![Image Alt](https://github.com/Taylorwaldo/PhishingEmailDetector/blob/main/LinkedIn_potential_spam.png?raw=true)
+![Image Alt](https://github.com/Taylorwaldo/PhishingEmailDetector/blob/main/images/LinkedIn_potential_spam.png?raw=true)
 
 
 In the main interface (pictured below), enter the email details:
 
-![Image Alt](https://github.com/Taylorwaldo/PhishingEmailDetector/blob/main/Second_page.png?raw=true)
+![Image Alt](https://github.com/Taylorwaldo/PhishingEmailDetector/blob/main/images/Second_page.png?raw=true)
 
   - Email Address: Enter the sender's email address
   - Subject: Enter the email subject line
@@ -47,31 +47,40 @@ In the main interface (pictured below), enter the email details:
 
 Click the "Calculate" button to analyze the email.
 
-![Image Alt](https://github.com/Taylorwaldo/PhishingEmailDetector/blob/main/inputExample_LinkedIn.png?raw=true)
+![Image Alt](https://github.com/Taylorwaldo/PhishingEmailDetector/blob/main/images/inputExample_LinkedIn.png?raw=true)
 
 Review the results in the panel on the right:
 
-![Image Alt](image_url)
+![Image Alt](https://github.com/Taylorwaldo/PhishingEmailDetector/blob/main/images/LinkedIn_Report.png?raw=true)
 
 ### Example Analysis
  
 
 Here's an example, a more subtle example, of analyzing a phishing email that claims to be from **Github**:
 
-![Image Alt](https://github.com/Taylorwaldo/PhishingEmailDetector/blob/main/GitHub_potential_spam.png?raw=true)
+![Image Alt](https://github.com/Taylorwaldo/PhishingEmailDetector/blob/main/images/GitHub_potential_spam.png?raw=true)
 
-When analyzed with our tool, the report correctly identifies this as highly suspicious:
+When analyzed with our tool, the report correctly identifies this as moderately suspicous:
 
-![Image Alt](image_url)
+![Image Alt](https://github.com/Taylorwaldo/PhishingEmailDetector/blob/main/images/GitHub_report.png?raw=true)
 
 
 Here's an example of analyzing a phishing email that claims to be from **Booking.com**:
 
-![Image Alt](https://github.com/Taylorwaldo/PhishingEmailDetector/blob/main/Bookingdotcom_potential_spam.png?raw=true)
+![Image Alt](https://github.com/Taylorwaldo/PhishingEmailDetector/blob/main/images/Bookingdotcom_potential_spam.png?raw=true)
 
 When analyzed with our tool, the report correctly identifies this as highly suspicious:
 
-![Image Alt](image_url)
+![Image Alt](https://github.com/Taylorwaldo/PhishingEmailDetector/blob/main/images/bookingcomReport.png?raw=true)
+
+Here's an example of analyzing a phishing email that claims to be from **accounts.google.com**:
+
+![Image Alt](https://github.com/Taylorwaldo/PhishingEmailDetector/blob/main/images/Gmail_Potential.png?raw=true)
+
+When analyzed with our tool, the report correctly identifies this as highly suspicious:
+
+![Image Alt](https://github.com/Taylorwaldo/PhishingEmailDetector/blob/main/images/gmail_report.png?raw=true)
+
 
 ### The Phishing Email Detector provides detailed information in its output about what specific suspicious elements it found in an email. Here are examples of what the program might tell users:
 
@@ -149,6 +158,10 @@ Hover over links to view the actual URL
 
 Report phishing attempts to your IT department or service provider
 
+
+
+
+Phishing email templates provided by/created using CanIPhish.com's simulation services
 
 ----------------------------------------------------------------------------------------------------------------------
 Developed by Taylor Waldo, James Bostick, Bennett Marsee, Caitlyn Pillsbury, and Caleb Walton

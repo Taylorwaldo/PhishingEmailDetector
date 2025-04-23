@@ -49,5 +49,25 @@ Here's an example of analyzing a phishing email that claims to be from LinkedIn:
 
 When analyzed with our tool, the report correctly identifies this as highly suspicious:
 
+![Image Alt](https://github.com/Taylorwaldo/PhishingEmailDetector/blob/main/resultExample.png?raw=true)
+
+### Phishing Probability Scale
+The application uses a 0-100 scoring system to indicate the likelihood of an email being a phishing attempt:
+
+**0-14: SAFE - No significant phishing indicators detected**
+**15-39: SOME SUSPICIOUS ELEMENTS - Likely legitimate but proceed with caution**
+**40-59: MODERATELY SUSPICIOUS - May be a phishing attempt, verify before taking action**
+**60-100: HIGHLY SUSPICIOUS - Likely a phishing attempt, do not click links or download attachments**
+
+### Best Practices
+Even with this tool, follow these best practices when dealing with suspicious emails:
+
+Never click links in suspicious emails
+Verify sender identities through official channels
+Don't open unexpected attachments
+Be wary of urgent requests or threats
+Check for spelling and grammar errors
+Hover over links to view the actual URL
+Report phishing attempts to your IT department or service provider
 
  

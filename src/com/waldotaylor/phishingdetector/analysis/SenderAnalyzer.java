@@ -81,6 +81,12 @@ public class SenderAnalyzer extends ThreatDetector {
         String sender = email.getSender();
         int score = 0;
 
+        // Extract email from format like "Name <email@domain.com>"
+        // Added this after due date
+        if (sender.contains("<") && sender.contains(">")) {
+            sender = sender.substring(sender.indexOf("<") + 1, sender.indexOf(">"));
+        }
+
         // Check if sender email is in a valid format
         if (!EMAIL_PATTERN.matcher(sender).matches()) {
             score += 50; // Invalid email format is highly suspicious

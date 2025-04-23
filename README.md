@@ -12,10 +12,12 @@ JavaFX (included in installation)
 ### Installation
 
 Download the latest release from the project repository
+
 Extract the ZIP file to your preferred location
+
 No additional installation is required
 
-Tutorial
+### Tutorial
 Starting the Application
 
 Double-click the application JAR file or run: java com.waldotaylor.phishingdetector.main.PhishingDetectorApplication

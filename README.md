@@ -55,8 +55,11 @@ When analyzed with our tool, the report correctly identifies this as highly susp
 The application uses a 0-100 scoring system to indicate the likelihood of an email being a phishing attempt:
 
 **0-14: SAFE - No significant phishing indicators detected**
+
 **15-39: SOME SUSPICIOUS ELEMENTS - Likely legitimate but proceed with caution**
+
 **40-59: MODERATELY SUSPICIOUS - May be a phishing attempt, verify before taking action**
+
 **60-100: HIGHLY SUSPICIOUS - Likely a phishing attempt, do not click links or download attachments**
 
 ### Best Practices

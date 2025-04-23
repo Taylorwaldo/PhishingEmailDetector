@@ -20,6 +20,7 @@ Starting the Application
 
 Double-click the application JAR file or run: java com.waldotaylor.phishingdetector.main.PhishingDetectorApplication
 You'll see the welcome screen:
+
 ![Image Alt](https://github.com/Taylorwaldo/PhishingEmailDetector/blob/077fbba69f4a480b4434c4ee5a933aeac7d5daf4/UTF-8Screenshot(110).png)
 
 Click the "Press to Start" button to proceed to the main interface.

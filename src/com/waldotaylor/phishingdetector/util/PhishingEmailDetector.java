@@ -20,6 +20,9 @@ import javafx.stage.Stage;
  *
  * This class launches the JavaFX application and loads the GUI
  * defined in the "PhishingEmailDetectorHome.fxml" file
+ *
+ * Inheritance - Sublcass: PhishingEmailDetector 
+ * Superclass: Application
  */
 public class PhishingEmailDetector extends Application {
 
@@ -29,7 +32,7 @@ public class PhishingEmailDetector extends Application {
      * @param stage The primary stage for this application
      * @throws Exception If the FXML file cannot be loaded.
      */
-    @Override
+    @Override //Polymorphism from Application class
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("PhishingEmailDetectorHome.fxml"));
 

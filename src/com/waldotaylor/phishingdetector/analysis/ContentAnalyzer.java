@@ -32,7 +32,7 @@ Logic
 
 
 // Analyzes email content for phishing language patterns
-
+//a child class that inherits from the abstract class ThreatDetector
 public class ContentAnalyzer extends ThreatDetector {
     // Load phishing keywords from resource file
     private static final List<String> PHISHING_KEYWORDS = ResourceLoader.loadResourceAsList("/com/waldotaylor/phishingdetector/resources/phishing_keywords.txt");

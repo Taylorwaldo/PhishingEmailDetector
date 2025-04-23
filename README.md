@@ -77,7 +77,7 @@ Here's an example of analyzing a phishing email that claims to be from **account
 
 ![Image Alt](https://github.com/Taylorwaldo/PhishingEmailDetector/blob/main/images/Gmail_Potential.png?raw=true)
 
-When analyzed with our tool, the report correctly identifies this as highly suspicious:
+When analyzed with our tool, the report correctly identifies that this email does appear to be safe:
 
 ![Image Alt](https://github.com/Taylorwaldo/PhishingEmailDetector/blob/main/images/gmail_report.png?raw=true)
 

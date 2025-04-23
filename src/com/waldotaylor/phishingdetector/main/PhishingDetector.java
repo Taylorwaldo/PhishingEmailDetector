@@ -52,7 +52,7 @@ public class PhishingDetector {
     /**
      * Initializes all analyzers with their weights
      */
-    private void initializeAnalyzers() {
+    public static void initializeAnalyzers() {
         analyzers.clear();
         // Add analyzers with adjusted weights (totaling 100%)
         analyzers.put(new SenderAnalyzer(), 0.15);    // 15% weight (decreased)

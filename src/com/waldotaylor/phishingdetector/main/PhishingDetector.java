@@ -32,15 +32,9 @@ Logic ->
  */
 
 public class PhishingDetector {
-    // Define ANSI color constants
-    public static final String ANSI_RESET = "\u001B[0m";
-    public static final String ANSI_GREEN = "\u001B[32m";
-    public static final String ANSI_YELLOW = "\u001B[33m";
-    public static final String ANSI_RED = "\u001B[31m";
-    public static final String ANSI_ORANGE = "\u001B[38;5;208m"; // Close approximation of orange
 
-    // The analyzers with their respective weights for the final score
-    private final Map<ThreatDetector, Double> analyzers = new HashMap<>();
+        // The analyzers with their respective weights for the final score
+    private static final Map<ThreatDetector, Double> analyzers = new HashMap<>();
 
     /**
      * Creates a new PhishingDetector with default analyzers and weights
@@ -52,7 +46,7 @@ public class PhishingDetector {
     /**
      * Initializes all analyzers with their weights
      */
-    private void initializeAnalyzers() {
+    public static void initializeAnalyzers() {
         analyzers.clear();
         // Add analyzers with adjusted weights (totaling 100%)
         analyzers.put(new SenderAnalyzer(), 0.15);    // 15% weight (decreased)
@@ -76,7 +70,7 @@ public class PhishingDetector {
      * @param email The email to analyze
      * @return A score from 0-100 indicating phishing probability
      */
-    public int analyzeEmail(Email email) {
+    public static int analyzeEmail(Email email) {
         // First run the BodyAnalyzer to extract links and potential attachments
         // This needs to be done before other analyzers since they may need this data
         for (ThreatDetector analyzer : analyzers.keySet()) {
@@ -133,7 +127,7 @@ public class PhishingDetector {
      * @param baseScore The initial weighted score
      * @return The adjusted score after applying multipliers
      */
-    private int applyRiskMultipliers(Email email, int baseScore) {
+    public static int applyRiskMultipliers(Email email, int baseScore) {
         int finalScore = baseScore;
 
         // Check for dangerous combinations
@@ -193,7 +187,7 @@ public class PhishingDetector {
      * @param phishingScore The calculated phishing score
      * @return A formatted report string
      */
-    public String generateReport(Email email, int phishingScore) {
+    public static String generateReport(Email email, int phishingScore) {
         StringBuilder report = new StringBuilder();
         report.append("PHISHING EMAIL DETECTION REPORT\n");
         report.append("===============================\n\n");
@@ -205,29 +199,17 @@ public class PhishingDetector {
         report.append("- Links Found: ").append(email.getLinks().size()).append("\n");
         report.append("- Attachments Found: ").append(email.getAttachments().size()).append("\n\n");
 
-        // Use color for the score itself
-        String scoreColor;
-        if (phishingScore < 15) { // Lowered from 20
-            scoreColor = ANSI_GREEN;
-        } else if (phishingScore < 40) { // Lowered from 50
-            scoreColor = ANSI_YELLOW;
-        } else if (phishingScore < 60) { // Lowered from 70
-            scoreColor = ANSI_ORANGE;
-        } else {
-            scoreColor = ANSI_RED;
-        }
-
-        report.append("Phishing Probability Score: ").append(scoreColor).append(phishingScore).append("/100").append(ANSI_RESET).append("\n\n");
+        report.append("Phishing Probability Score: ").append(phishingScore).append("/100").append("\n\n");
 
         // Interpret the score with color
         if (phishingScore < 15) { // Lowered from 20
-            report.append("ASSESSMENT: ").append(ANSI_GREEN).append("This email appears to be SAFE. No significant phishing indicators detected.").append(ANSI_RESET).append("\n");
+            report.append("ASSESSMENT: ").append("This email appears to be SAFE. No significant phishing indicators detected.").append("\n");
         } else if (phishingScore < 40) { // Lowered from 50
-            report.append("ASSESSMENT: ").append(ANSI_YELLOW).append("This email has SOME SUSPICIOUS elements but is likely legitimate. Proceed with caution.").append(ANSI_RESET).append("\n");
+            report.append("ASSESSMENT: ").append("This email has SOME SUSPICIOUS elements but is likely legitimate. Proceed with caution.").append("\n");
         } else if (phishingScore < 60) { // Lowered from 70
-            report.append("ASSESSMENT: ").append(ANSI_ORANGE).append("This email is MODERATELY SUSPICIOUS and may be a phishing attempt. Verify before taking any action.").append(ANSI_RESET).append("\n");
+            report.append("ASSESSMENT: ").append("This email is MODERATELY SUSPICIOUS and may be a phishing attempt. Verify before taking any action.").append("\n");
         } else {
-            report.append("ASSESSMENT: ").append(ANSI_RED).append("This email is HIGHLY SUSPICIOUS and likely a phishing attempt. Do not click links, download attachments, or respond with personal information.").append(ANSI_RESET).append("\n");
+            report.append("ASSESSMENT: ").append("This email is HIGHLY SUSPICIOUS and likely a phishing attempt. Do not click links, download attachments, or respond with personal information.").append("\n");
         }
 
         // List suspicious elements
@@ -250,11 +232,11 @@ public class PhishingDetector {
 
                         // Add appropriate warning level based on score
                         if (score >= 70) {
-                            report.append("  ").append(ANSI_RED).append("WARNING: HIGHLY SUSPICIOUS LINKS FOUND:").append(ANSI_RESET).append("\n");
+                            report.append("  ").append("WARNING: HIGHLY SUSPICIOUS LINKS FOUND:").append("\n");
                         } else if (score >= 40) {
-                            report.append("  ").append(ANSI_ORANGE).append("CAUTION: MODERATELY SUSPICIOUS LINKS FOUND:").append(ANSI_RESET).append("\n");
+                            report.append("  ").append("CAUTION: MODERATELY SUSPICIOUS LINKS FOUND:").append("\n");
                         } else if (score >= 15) {
-                            report.append("  ").append(ANSI_YELLOW).append("NOTE: SLIGHTLY SUSPICIOUS LINKS FOUND:").append(ANSI_RESET).append("\n");
+                            report.append("  ").append("NOTE: SLIGHTLY SUSPICIOUS LINKS FOUND:").append("\n");
                         } else {
                             report.append("  Links found (low suspicion):\n");
                         }
@@ -318,7 +300,7 @@ public class PhishingDetector {
 
                         // Add details about what was found in the content
                         if (score >= 70) {
-                            report.append("  ").append(ANSI_RED).append("ALERT: Highly suspicious content detected").append(ANSI_RESET).append("\n");
+                            report.append("  ").append("ALERT: Highly suspicious content detected").append("\n");
                         }
 
                         // Check for common phishing phrases and highlight them
@@ -335,9 +317,8 @@ public class PhishingDetector {
 
                     } else if (analyzer instanceof AttachmentAnalyzer && !email.getAttachments().isEmpty()) {
                         // Color-code based on attachment risk
-                        String attachmentRiskColor = score >= 70 ? ANSI_RED : (score >= 40 ? ANSI_ORANGE : ANSI_YELLOW);
                         report.append("- Potentially dangerous attachments detected (score: ")
-                                .append(attachmentRiskColor).append(score).append(ANSI_RESET).append(")\n");
+                                .append(score).append(")\n");
 
                         report.append("  Attachments found:\n");
                         for (String attachment : email.getAttachments()) {
@@ -349,9 +330,9 @@ public class PhishingDetector {
                             // Check for high-risk extensions
                             for (String ext : ResourceLoader.loadResourceAsList("/com/waldotaylor/phishingdetector/resources/high_risk_extensions.txt")) {
                                 if (lowerAttachment.endsWith(ext.toLowerCase())) {
-                                    report.append("    * ").append(ANSI_RED)
+                                    report.append("    * ")
                                             .append("HIGH RISK: Contains executable or script extension (")
-                                            .append(ext).append(")").append(ANSI_RESET).append("\n");
+                                            .append(ext).append(")").append("\n");
                                     break;
                                 }
                             }
@@ -359,9 +340,9 @@ public class PhishingDetector {
                             // Check for medium-risk extensions
                             for (String ext : ResourceLoader.loadResourceAsList("/com/waldotaylor/phishingdetector/resources/medium_risk_extensions.txt")) {
                                 if (lowerAttachment.endsWith(ext.toLowerCase())) {
-                                    report.append("    * ").append(ANSI_ORANGE)
+                                    report.append("    * ")
                                             .append("MEDIUM RISK: Contains potentially risky file type (")
-                                            .append(ext).append(")").append(ANSI_RESET).append("\n");
+                                            .append(ext).append(")").append("\n");
                                     break;
                                 }
                             }
@@ -371,9 +352,9 @@ public class PhishingDetector {
                             if (lastDotIndex > 0) {
                                 String nameWithoutExtension = lowerAttachment.substring(0, lastDotIndex);
                                 if (nameWithoutExtension.contains(".")) {
-                                    report.append("    * ").append(ANSI_RED)
+                                    report.append("    * ")
                                             .append("SUSPICIOUS: Contains multiple file extensions (possible disguised file)")
-                                            .append(ANSI_RESET).append("\n");
+                                            .append("\n");
                                 }
                             }
                         }

@@ -35,7 +35,7 @@ Logic -->
 /**
  * Analyzes links in the email for suspicious patterns
  */
-
+//a child class that inherits from the abstract class ThreatDetector
 public class LinkAnalyzer extends ThreatDetector {
     // Load suspicious domains from the resource file
     private static final List<String> SUSPICIOUS_DOMAINS = ResourceLoader.loadResourceAsList("/com/waldotaylor/phishingdetector/resources/suspicious_domains.txt");

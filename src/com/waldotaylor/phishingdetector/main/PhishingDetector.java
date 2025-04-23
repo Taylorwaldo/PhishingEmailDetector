@@ -75,6 +75,7 @@ public class PhishingDetector {
         // This needs to be done before other analyzers since they may need this data
         for (ThreatDetector analyzer : analyzers.keySet()) {
             if (analyzer instanceof BodyAnalyzer) {
+                //example of polymorphism
                 analyzer.analyze(email);
                 break;
             }
@@ -90,6 +91,7 @@ public class PhishingDetector {
 
             // Skip BodyAnalyzer since we already ran it
             if (!(analyzer instanceof BodyAnalyzer)) {
+                //example of polymorphism
                 int score = analyzer.analyze(email);
                 weightedScoreSum += score * weight;
 
@@ -218,6 +220,7 @@ public class PhishingDetector {
 
             // Run individual analyzers again to highlight issues
             for (ThreatDetector analyzer : analyzers.keySet()) {
+                 //example of polymorphism   
                 int score = analyzer.analyze(email);
                 if (score > 0) {
                     if (analyzer instanceof SenderAnalyzer) {

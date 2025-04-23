@@ -62,6 +62,21 @@ Here's an example, a more subtle example, of analyzing a phishing email that cla
 
 When analyzed with our tool, the report correctly identifies this as moderately suspicous:
 
+EDIT: Time didn't permit to program logic to detect typosquatting or character substitution attacks like:  
+"glthub.com" instead of "github.com"
+
+Currently LinkAnalyzer.java is checking for several suspicious patterns in URLs:
+
+Non-HTTPS links
+
+IP addresses in URLs
+
+Known suspicious domains
+
+Unusually long domain names
+
+URLs with many special characters
+
 ![Image Alt](https://github.com/Taylorwaldo/PhishingEmailDetector/blob/main/images/GitHub_report.png?raw=true)
 
 

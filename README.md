@@ -1,6 +1,8 @@
-### Phishing Email Detector
+# Phishing Email Detector
 
-![Image Alt](https://github.com/Taylorwaldo/PhishingEmailDetector/blob/main/images/custom_Logo.png?raw=true)
+<p align="center">
+  <img src="https://github.com/Taylorwaldo/PhishingEmailDetector/blob/main/images/custom_Logo.png?raw=true" alt="Image Alt" />
+</p>
 
 ### Introduction
 The Phishing Email Detector is a tool that helps you identify potentially malicious emails by analyzing sender information, subject lines, content, links, and attachments. Our application provides both a command-line interface and a graphical user interface for easy analysis of suspicious emails.
@@ -205,5 +207,6 @@ Phishing email templates provided by/created using CanIPhish.com's simulation se
 
 ----------------------------------------------------------------------------------------------------------------------
 Developed by Taylor Waldo, James Bostick, Bennett Marsee, Caitlyn Pillsbury, and Caleb Walton
+
 Feel free to use, modify, and distribute this software for educational purposes.
  
